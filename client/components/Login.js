@@ -11,14 +11,13 @@ class Login extends Component {
     }
 
     return (
-      <div id='all'>
+      <div id='allLogin'>
         <div id='top'>
-          <h1>Welcome to PaperTrail</h1>
-          {/* <img id='logo' src="https://previews.123rf.com/images/eljanstock/eljanstock1811/eljanstock181116529/112444111-money-vector-icon-isolated-on-transparent-background-money-transparency-logo-concept.jpg"></img> */}
+          <h1>Welcome to PaperTrail!</h1>
           <img id='logo' src="logo.png"/>
-        
         </div>
-        <form onSubmit={this.props.handleLogin}>
+        
+        <form id="logForm" onSubmit={this.props.handleLogin}>
           <input type="email" className="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email Address"/>
           <input type="password" id="inputPassword" className="form-control" aria-describedby="passwordHelpInline" placeholder="Password"/>
           <div>
@@ -29,6 +28,7 @@ class Login extends Component {
             <button id="createAcc" type="button" className='btn btn-secondary'>Create Account</button>
           </Link>
         </form>
+
       </div>
     );
   }

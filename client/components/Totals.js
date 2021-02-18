@@ -125,6 +125,9 @@ class Totals extends Component {
             <p>Create New Category</p>
           </button>
         </form>
+
+
+
         <div>
           <ImageUploader
             withIcon={false}
@@ -136,6 +139,7 @@ class Totals extends Component {
             maxFileSize={1000000}
           />
         </div>
+        
         <div id='pastExpenses'>
           <form id='pastExpenses'>
             {/* here console.log renderAllExpenses()) */}

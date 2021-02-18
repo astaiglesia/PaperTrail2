@@ -83,37 +83,41 @@ render() {
             imgExtension={[".jpg", ".gif", ".png", ".gif", ".svg"]}
             maxFileSize={1000000}
           />
-          <button onClick = {this.addItem}>Save</button>
+          <button id="save" onClick = {this.addItem}>Save</button>
     </button>)
   };
   // console.log('state after onchangeFile', this.state.file)
 
     return (
-      <div id='all'>
-        <div id='top'>
+      <div id="allMain">
+
+        <div id="mainTop">
           <h1>Welcome {this.props.state.user.userName}!</h1>
-        </div>
-        <form>
-            <input type="text" id="newCategory" className="form-control" aria-describedby="passwordHelpInline" placeholder="Category Name" onSubmit={this.props.addCategory}/>
-            <button id="newCat" type="submit" className='btn btn-primary' onClick={this.props.addCategory} >
-              <p>Create New Category</p>
+          <form id="category">
+            <input type="text" className="form-control" id="newCategory" aria-describedby="passwordHelpInline" placeholder="Category Name" onSubmit={this.props.addCategory}/>
+            <button type="submit" className='btn btn-primary' id="submitCategory" onClick={this.props.addCategory} >
+              Create New Category
             </button>
-           
-        </form>
+          </form>
+        </div>
+
+
+
         <div id="mid">
-        <h1>Your Categories:</h1>
+          <h1>Your Categories:</h1>
         </div>
-           <div>
-              {arrOfCategories}
-              <button className='btn btn-primary'>
-                <Link to = "/totals" style = {styles.container}>Totals</Link>
-            </button>
-            </div>
-            <Link to = "/"> 
-              <button className = "btn btn-secondary">
-                Logout
-              </button>
-            </Link>
+        
+        <div id="receiptContainer">
+          {arrOfCategories}
+        </div>
+        <div id="submission">
+          <button className='btn btn-primary' id="totalsButton">
+            <Link to = "/totals" style = {styles.container}>totals</Link>
+          </button>
+          <button className="btn btn-secondary" id="logout">
+            <Link to = "/" style = {styles.container}> logout </Link>
+          </button>
+        </div>  
       </div>
     );
   }

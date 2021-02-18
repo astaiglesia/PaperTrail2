@@ -19,26 +19,26 @@ class CreateAccount extends Component {
     }
 
     return (
-        <div id='all'>
-          <div id='top'>
+        <div id='allCreate'>
+          <div id='createTop'>
             <h1>Create Account</h1>
-            {/* <img id='logo' src="logo.png"></img> */}
             </div>
 
-          <form onSubmit={this.props.handleCreation}> 
+          <form id="createForm" onSubmit={this.props.handleCreation}> 
               <input type="text" className="form-control" id="inputFullName" aria-describedby="fullNameHelp" placeholder="Full Name"/>
               <input type="text" className="form-control" id="inputUserName" aria-describedby="userNameHelp" placeholder="Username"/>
               <input type="email" className="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email Address"/>
               <input type="password" id="inputPassword" className="form-control" aria-describedby="passwordHelpInline" placeholder="Password"/>
-              <div>
-              <button id="createacc" type="Submit" className='btn btn-secondary'  onClick={this.props.handleCreation}>Create Account</button>
-              </div>
           </form>
+
+          <div id="submission">
+            <button id="createacc" type="Submit" className='btn btn-secondary'  onClick={this.props.handleCreation}>Create Account</button>
             <Link to = "/" style = {styles.container}>
               <button className='btn btn-secondary' style = {styles.container}>
                 Back to Home
               </button>
             </Link>
+          </div>
         </div>
     );
   }
