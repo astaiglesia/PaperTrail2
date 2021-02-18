@@ -20,9 +20,20 @@ class CreateAccount extends Component {
 
     return (
         <div id='allCreate'>
-          <div id='createTop'>
-            <h1>Create Account</h1>
+          <header>
+            <Link id="home" to = "/" style = {styles.container}>
+              <button className='btn btn-secondary' id="homeButton">
+                Home
+              </button>
+            </Link>
+            <div id="titleBox">
+              <span id="banner">PaperTrail</span>
             </div>
+          </header>
+                    
+          <div id='createTop'>
+            <h1>Create an Account</h1>
+          </div>
 
           <form id="createForm" onSubmit={this.props.handleCreation}> 
               <input type="text" className="form-control" id="inputFullName" aria-describedby="fullNameHelp" placeholder="Full Name"/>
@@ -33,11 +44,6 @@ class CreateAccount extends Component {
 
           <div id="submission">
             <button id="createacc" type="Submit" className='btn btn-secondary'  onClick={this.props.handleCreation}>Create Account</button>
-            <Link to = "/" style = {styles.container}>
-              <button className='btn btn-secondary' style = {styles.container}>
-                Back to Home
-              </button>
-            </Link>
           </div>
         </div>
     );

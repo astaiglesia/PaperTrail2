@@ -29,8 +29,8 @@ class Login extends Component {
           </Link>
         </form>
 
-      <div id="footer">
-        <span>a catSnake product</span>
+      <div id="landingFooter">
+        a catSnake product <span>&#169;</span> 2021
       </div>
 
       </div>

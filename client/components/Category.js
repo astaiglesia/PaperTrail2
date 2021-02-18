@@ -90,6 +90,16 @@ render() {
 
     return (
       <div id="allMain">
+         <header>
+            <Link id="home" to = "/" style = {styles.container}>
+              <button className='btn btn-secondary' id="homeButton">
+                Home
+              </button>
+            </Link>
+            <div id="titleBox">
+              <span id="banner">PaperTrail</span>
+            </div>
+          </header>
 
         <div id="mainTop">
           <h1>{this.props.state.user.userName}'s Dashboard</h1>

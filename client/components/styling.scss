@@ -26,6 +26,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 768px;
 }
 
 #top {
@@ -42,6 +43,7 @@ body{
 
 #top > h1 {
   font-family:serif;
+  -webkit-text-stroke: 1px black;
   font-size: 48px;
   font-weight: 400;
 }
@@ -62,8 +64,13 @@ body{
 }
 
 #landingFooter {
-  border: thin solid black;
+  flex: 1;
+  justify-content: end;
+  margin-top: 100px;
+  padding-left: 50%;
+  // border: thin solid black;
   font-family: 'Nanum Pen Script', cursive;
+  color: white;
 }
 
 // ------- Create Account Styling
@@ -73,10 +80,54 @@ body{
   align-items: center;
 }
 
+header {
+  flex: 1;
+  border-bottom: thin solid white;
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+}
+
+#home {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+}
+
+#homeButton {
+  flex: 1;
+  max-width: 75px;
+  max-height: 25px;
+  background: lightgray;
+  border: thin solid black;
+  box-shadow: 1px 1px 3px white;
+  color: navy;
+  font-size: 10px;
+}
+
+#titleBox {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+#banner {
+  flex: 1;
+  // border: thin solid red;
+  font-family: 'Nanum Pen Script', cursive;
+  color: white;
+  font-size: 54px;
+  text-align: end;
+  margin-right: 5%;
+}
+
 #createTop {
   flex: 1;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: lightcoral;
+  font-family:serif;
+  font-size: 28px;
+  color: coral;
+  -webkit-text-stroke: 1px black;
   margin-top: 10%;
   padding-left: 2%;
 }
@@ -93,7 +144,7 @@ input {
 #submission {
   flex: 1;
   color: white;
-  padding-right: 2%;
+  
 }
 
 
@@ -101,6 +152,7 @@ input {
 #allMain {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -111,8 +163,10 @@ input {
 }
 
 #mainTop > h1 {
-  color: lightcoral;
-  padding-left: 3%;
+  color: coral;
+  font-family:serif;
+  -webkit-text-stroke: 1px black;
+  // padding-left: 3%;
 }
 
 #mid {
@@ -141,9 +195,9 @@ input {
   color: white;
 }
 
-.fileContainer {
-  background: red;
-}
+// .fileContainer {
+//   background: red;
+// }
 
 #save {
   color: white;
@@ -171,7 +225,6 @@ width: 180px;
 $margin: 15px;
 
 button {
-  display:grid;
   justify-items: center;
   margin: $margin;
   width: 100%;
