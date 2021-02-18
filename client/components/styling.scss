@@ -57,11 +57,14 @@ body{
   padding-right: 2%;
 }
 
-
-#log{
+#log {
   background-color: green;
 }
 
+#landingFooter {
+  border: thin solid black;
+  font-family: 'Nanum Pen Script', cursive;
+}
 
 // ------- Create Account Styling
 #allCreate {
@@ -112,8 +115,6 @@ input {
   padding-left: 3%;
 }
 
-
-
 #mid {
   flex: 1;
   display: flex;
@@ -144,7 +145,6 @@ input {
   background: red;
 }
 
-
 #save {
   color: white;
 }
@@ -165,10 +165,6 @@ margin-top: 25%;
 margin-bottom: 10%;
 height: 180px;
 width: 180px;
-// background:transparent;
-// position: relative;
-
-//     overflow: hidden;
 }
 
 

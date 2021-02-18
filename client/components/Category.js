@@ -92,16 +92,14 @@ render() {
       <div id="allMain">
 
         <div id="mainTop">
-          <h1>Welcome {this.props.state.user.userName}!</h1>
+          <h1>{this.props.state.user.userName}'s Dashboard</h1>
           <form id="category">
-            <input type="text" className="form-control" id="newCategory" aria-describedby="passwordHelpInline" placeholder="Category Name" onSubmit={this.props.addCategory}/>
+            <input type="text" className="form-control" id="newCategory" aria-describedby="passwordHelpInline" placeholder="start a new category" onSubmit={this.props.addCategory}/>
             <button type="submit" className='btn btn-primary' id="submitCategory" onClick={this.props.addCategory} >
-              Create New Category
+              upload receipts
             </button>
           </form>
         </div>
-
-
 
         <div id="mid">
           <h1>Your Categories:</h1>
@@ -110,6 +108,7 @@ render() {
         <div id="receiptContainer">
           {arrOfCategories}
         </div>
+
         <div id="submission">
           <button className='btn btn-primary' id="totalsButton">
             <Link to = "/totals" style = {styles.container}>totals</Link>

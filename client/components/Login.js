@@ -25,9 +25,13 @@ class Login extends Component {
             onClick={this.props.handleLogin}>Login</button>
           </div>
           <Link to="/Users/createAccount">
-            <button id="createAcc" type="button" className='btn btn-secondary'>Create Account</button>
+            <button id="createAcc" type="button" className='btn btn-secondary'>Join Now!</button>
           </Link>
         </form>
+
+      <div id="footer">
+        <span>a catSnake product</span>
+      </div>
 
       </div>
     );
