@@ -19,6 +19,7 @@ class CreateAccount extends Component {
     }
 
     return (
+<<<<<<< HEAD
         <div id='allCreate'>
           <header>
             <Link id="home" to = "/" style = {styles.container}>
@@ -28,6 +29,12 @@ class CreateAccount extends Component {
             </Link>
             <div id="titleBox">
               <span id="banner">PaperTrail</span>
+=======
+        <div id='all'>
+          <div id='top'>
+            <h1>Create Account</h1>
+            {/* <img id='logo2' src="money-bag.png"></img> */}
+>>>>>>> 104c31ff573b1c7fe481c33d76b155b87a96f6ed
             </div>
           </header>
                     
@@ -40,6 +47,13 @@ class CreateAccount extends Component {
               <input type="text" className="form-control" id="inputUserName" aria-describedby="userNameHelp" placeholder="Username"/>
               <input type="email" className="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email Address"/>
               <input type="password" id="inputPassword" className="form-control" aria-describedby="passwordHelpInline" placeholder="Password"/>
+<<<<<<< HEAD
+=======
+              <input type="budget" id="inputBudget" className="form-control" aria-describedby="budgetHelpInline" placeholder="Budget"/>
+              <div>
+              <button id="createacc" type="Submit" className='btn btn-secondary'  onClick={this.props.handleCreation}>Create Account</button>
+              </div>
+>>>>>>> 104c31ff573b1c7fe481c33d76b155b87a96f6ed
           </form>
 
           <div id="submission">

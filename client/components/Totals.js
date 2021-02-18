@@ -125,6 +125,7 @@ class Totals extends Component {
             <p>Create New Category</p>
           </button>
         </form>
+<<<<<<< HEAD
 
 
 
@@ -140,6 +141,8 @@ class Totals extends Component {
           />
         </div>
         
+=======
+>>>>>>> 104c31ff573b1c7fe481c33d76b155b87a96f6ed
         <div id='pastExpenses'>
           <form id='pastExpenses'>
             {/* here console.log renderAllExpenses()) */}

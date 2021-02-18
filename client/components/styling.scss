@@ -243,4 +243,24 @@ input {
 //   }
 // }
 
+<<<<<<< HEAD
+=======
+button {
+  display:grid;
+  justify-items: center;
+  margin: $margin;
+  width: 100%;
+  &:hover {
+    background: #0d6efd;
+  }
+}
+
+
+#log{
+  background-color: green;
+}
+#createacc {
+  background-color: lightblue;
+}
+>>>>>>> 104c31ff573b1c7fe481c33d76b155b87a96f6ed
 
