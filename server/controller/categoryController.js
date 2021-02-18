@@ -40,22 +40,28 @@ categoryController.validateCategory = (req, res, next) => {
 categoryController.createCategory = (req, res, next) => {
 
   // use userController.getUser to grab the user's existing categories first, then add a new category to that array
-  // now we weill add 1 more category to this user's document
+  // now we will add 1 more category to this user's document
+  
+  // create a query variable to filter by email and passed in as the conditions argument to the update method 
   const currentUserFilter = {
     email: res.locals.user.email 
   };
 
-  console.log('Adding new category to user >>> ', res.locals.user.fullName);
-  let userCategories = res.locals.user.categories;
-  console.log('Existing categories ===> ',userCategories);
+  // console.log('Adding new category to user >>> ', res.locals.user.fullName);
+  // let userCategories = res.locals.user.categories;
+  // console.log('Existing categories ===> ', userCategories);
+  
+  // create a new category using data from the request body using the categorySchema
   const newCategory = {
     category: req.body.category,
     total: 0,
     items: []
   }; 
-
+  // create an array concating the existing categories with the post request data
   const newCategories = [...res.locals.user.categories, newCategory];
-  console.log('Updated categories array ===> ',userCategories)
+  // console.log('Updated categories array ===> ',userCategories)
+
+
   User.findOneAndUpdate(currentUserFilter, {categories: newCategories}, {new: true}).exec()
     .then(updatedUserDocument => {
       console.log('Create new category => ', updatedUserDocument);

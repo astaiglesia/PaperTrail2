@@ -31,6 +31,11 @@ const userSchema = new Schema ({
 
   }]
 })
+
+const User = mongoose.model('user', userSchema);
+
+
+// ---------
 // Example add category request 
 
 // {
@@ -49,22 +54,19 @@ const userSchema = new Schema ({
 // }
 
 
+const categorySchema = new Schema ({
+  category: String,
+  total: Number,
+  items: [{
+    description: String, 
+    id: {
+      type: Schema.Types.ObjectId,
+      ref: 'item'
+    }
+  }]
+})
 
-const User = mongoose.model('user', userSchema);
-
-// const categorySchema = new Schema ({
-//   total: Number,
-//   type: String,
-//   items: [{
-//     description: String, 
-//     id: {
-//       type: Schema.Types.ObjectId,
-//       ref: 'item'
-//     }
-//   }]
-// })
-
-// const Category = mongoose.model('category', categorySchema);
+const Category = mongoose.model('category', categorySchema);
 
 const itemSchema = new Schema ({
   cost: Number,
@@ -79,6 +81,6 @@ const Item = mongoose.model('item', itemSchema);
 
 module.exports = {
   User,
-  // Category,
+  Category,
   Item
 }
